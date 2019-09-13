@@ -28,11 +28,12 @@ Singularity recipe for [bio-formats](https://www.openmicroscopy.org/bio-formats/
 
 * `mkfake`. Creates a “fake” high-content screen with configurable dimensions. This is useful for testing how HCS metadata is handled, without requiring real image data from an acquired screen. See Create a high-content screen for testing for more information.
 
+To make this image even more awesome I included [ffmpeg](https://ffmpeg.org/) and [ImageMagick](https://imagemagick.org/index.php).
+
 ## Installation
 
 * Install [Singularity v2.6.+](https://sylabs.io/docs/).
 * Run the script `install.sh` included in this repository.
-
 
 ## Disclaimer
 
