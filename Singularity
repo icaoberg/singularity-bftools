@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: ubuntu:16.04
+From: debian:latest
 
 IncludeCmd: yes
 
@@ -14,26 +14,19 @@ IncludeCmd: yes
 %post
     /usr/bin/apt-get update && apt-get install -y --no-install-recommends apt-utils
     /usr/bin/apt-get update --fix-missing
-    /usr/bin/apt-get install -y curl git wget
+    /usr/bin/apt-get install -y unzip wget default-jre
 
     wget -nc https://downloads.openmicroscopy.org/bio-formats/6.2.1/artifacts/bftools.zip
-    mkdir ~/bin
-    unzip bftools.zip -d ~/bin
-
-    if [ ! -d /images ]; then mkdir /images; fi
-    if [ ! -d /projects ]; then mkdir /projects; fi
-    if [ ! -d /containers ]; then mkdir /containers; fi
-    if [ ! -d /share ]; then mkdir /share; fi
-    if [ ! -d /scratch ]; then mkdir /scratch; fi
-    if [ ! -d /webservers/pfenningweb ]; then mkdir -p /webservers/pfenningweb; fi
+    unzip bftools.zip -d /opt
+    rm bftools.zip
 
 ####################################################################################
 %appenv showinf
-    APP=~/bin/showinf
+    APP=/opt/bftools/showinf
     export APP
 
 %apphelp showinf
-    Prints information about a given image file to the console, and displays the image itself in the Bio-Formats image viewer (see Displaying images and metadata for more information).
+    /opt/bftools/showinf --help
 
 %apprun showinf
-    showinf "$@"
+    /opt/bftools/showinf "$@"
