@@ -14,7 +14,7 @@ IncludeCmd: yes
 %post
     /usr/bin/apt-get update && apt-get install -y --no-install-recommends apt-utils
     /usr/bin/apt-get update --fix-missing
-    /usr/bin/apt-get install -y unzip wget default-jre
+    /usr/bin/apt-get install -y unzip wget default-jre ffmpeg imagemagick
 
     wget -nc https://downloads.openmicroscopy.org/bio-formats/6.2.1/artifacts/bftools.zip
     unzip bftools.zip -d /opt
@@ -113,12 +113,8 @@ IncludeCmd: yes
     /opt/bftools/domainlist "$@"
 
 ####################################################################################
-%appenv mkfake
-    APP=/opt/bftools/mkfake
-    export APP
+%apphelp ffmpeg
+    ffmpeg --help
 
-%apphelp mkfake
-    /opt/bftools/mkfake --help
-
-%apprun mkfake
-    /opt/bftools/mkfake "$@"
+%apprun ffmpeg
+    ffmpeg "$@"
