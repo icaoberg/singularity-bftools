@@ -18,11 +18,11 @@ IncludeCmd: yes
 
     wget -nc https://downloads.openmicroscopy.org/bio-formats/6.2.1/artifacts/bftools.zip
     unzip bftools.zip -d /opt
-    rm bftools.zip
+    rm -f bftools.zip
 
-    wget -nc https://downloads.imagej.net/fiji/latest/fiji-linux64.zip
-    unzip fiji-linux64.zip -d /opt
-    rm fiji-linux64.zip
+    wget -nc http://wsr.imagej.net/distros/linux/ij152-linux64-java8.zip
+    unzip ij152-linux64-java8.zip -d /opt
+    rm -f ij152-linux64-java8.zip
 
 ####################################################################################
 %appenv showinf
