@@ -7,14 +7,14 @@ IncludeCmd: yes
     AUTHOR icaoberg
     EMAIL icaoberg@andrew.cmu.edu
     WEBSITE http://www.andrew.cmu.edu/~icaoberg
-    VERSION 6.2.1
+    VERSION 6.3.0
 
 %post
     /usr/bin/apt-get update && apt-get install -y --no-install-recommends apt-utils
     /usr/bin/apt-get update --fix-missing
     /usr/bin/apt-get install -y unzip wget default-jre ffmpeg imagemagick
 
-    wget -nc https://downloads.openmicroscopy.org/bio-formats/6.2.1/artifacts/bftools.zip
+    wget -nc https://downloads.openmicroscopy.org/bio-formats/6.3.0/artifacts/bftools.zip
     unzip bftools.zip -d /opt
     rm -f bftools.zip
 
