@@ -1,22 +1,19 @@
 Bootstrap: docker
-From: debian:latest
+From: debian:buster
 
 IncludeCmd: yes
 
 %labels
     AUTHOR icaoberg
-    EMAIL icaoberg@alumni.cmu.edu
-    WEBSITE http://linus.cbd.cs.cmu.edu
-
-%runscript
-    exec /bin/bash "$@"
+    EMAIL icaoberg@andrew.cmu.edu
+    WEBSITE http://www.andrew.cmu.edu/~icaoberg
+    VERSION 6.2.1
 
 %post
     /usr/bin/apt-get update && apt-get install -y --no-install-recommends apt-utils
     /usr/bin/apt-get update --fix-missing
     /usr/bin/apt-get install -y unzip wget default-jre ffmpeg imagemagick
 
-    #install bio-formats cli tools
     wget -nc https://downloads.openmicroscopy.org/bio-formats/6.2.1/artifacts/bftools.zip
     unzip bftools.zip -d /opt
     rm -f bftools.zip
