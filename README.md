@@ -1,6 +1,6 @@
 # bioformats
-[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2229)
-[![Hosted](https://img.shields.io/badge/hosted-sylabs.io-red.svg)](https://cloud.sylabs.io/library/icaoberg/default/bioformats)
+[![Hosted](https://img.shields.io/badge/hosted-sylabs.io-green.svg)](https://cloud.sylabs.io/library/icaoberg/default/bioformats)
+![Release](https://img.shields.io/badge/release-v3.3.1-green.svg)
 [![Build Status](https://travis-ci.org/icaoberg/singularity-bioformats.svg?branch=master)](https://travis-ci.org/icaoberg/singularity-bioformats)
 [![GitHub issues](https://img.shields.io/github/issues/icaoberg/singularity-bioformats.svg)](https://github.com/icaoberg/singularity-bioformats/issues)
 [![GitHub forks](https://img.shields.io/github/forks/icaoberg/singularity-bioformats.svg)](https://github.com/icaoberg/singularity-bioformats/network)
@@ -31,11 +31,6 @@ Singularity recipe for [bio-formats](https://www.openmicroscopy.org/bio-formats/
 
 To make this image even more awesome I included [ffmpeg](https://ffmpeg.org/) and [ImageMagick](https://imagemagick.org/index.php).
 
-## Installation
-
-* Install [Singularity v2.6.+](https://sylabs.io/docs/).
-* Run the script `install.sh` included in this repository.
-
 ## Disclaimer
 
 [![Wold you buy me some coffee?](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/icaoberg)
@@ -45,4 +40,4 @@ I am nothing but a humble programmer creating the container for these wonderful 
 ---
 [![CBD](http://www.cbd.cmu.edu/wp-content/uploads/2017/07/wordpress-default.png)](http://www.cbd.cmu.edu)
 
-Copyleft © 2019 [icaoberg](http://www.andrew.cmu.edu/~icaoberg) at the [Computational Biology Department](http://www.cbd.cmu.edu) in [Carnegie Mellon University](http://www.cmu.edu)
+Copyleft © 2019-2020 [icaoberg](http://www.andrew.cmu.edu/~icaoberg) at the [Computational Biology Department](http://www.cbd.cmu.edu) in [Carnegie Mellon University](http://www.cmu.edu)
