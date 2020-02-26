@@ -1,22 +1,21 @@
 Bootstrap: docker
 From: debian:buster
 
-IncludeCmd: yes
-
 %labels
     AUTHOR icaoberg
     EMAIL icaoberg@andrew.cmu.edu
     WEBSITE http://www.andrew.cmu.edu/~icaoberg
-    VERSION 6.3.0
+    VERSION 6.3.1
 
 %post
-    /usr/bin/apt-get update && apt-get install -y --no-install-recommends apt-utils
-    /usr/bin/apt-get update --fix-missing
-    /usr/bin/apt-get install -y unzip wget default-jre ffmpeg imagemagick
+    apt-get update && apt-get install -y --no-install-recommends apt-utils
+    apt-get update --fix-missing
+    apt-get install -y unzip wget default-jre ffmpeg imagemagick
 
-    wget -nc https://downloads.openmicroscopy.org/bio-formats/6.3.0/artifacts/bftools.zip
+    wget -nc https://downloads.openmicroscopy.org/bio-formats/6.3.1/artifacts/bftools.zip
     unzip bftools.zip -d /opt
     rm -f bftools.zip
+    apt-get remove -y wget
 
 ####################################################################################
 #  _     _              __                            _
