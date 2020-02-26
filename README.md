@@ -31,6 +31,35 @@ Singularity recipe for [bio-formats](https://www.openmicroscopy.org/bio-formats/
 
 To make this image even more awesome I included [ffmpeg](https://ffmpeg.org/) and [ImageMagick](https://imagemagick.org/index.php).
 
+## Pre-requisites
+
+* [Singularity v3.5.+](https://sylabs.io/docs/).
+
+## Building the image using the recipe
+
+### To build the image locally
+Run the script `build.sh` to build image locally.
+
+```
+bash ./build.sh
+```
+
+### To build the image remotely remotely
+Run the script `rbuild.sh` to build image remotely.
+
+```
+bash ./rbuild.sh
+```
+
+You will need to edit the script above to match your account on [SyLabs.io](https://sylabs.io/).
+
+### Pulling from the repository
+If you have the client installed and cannot build the image locally nor remotely, simply run
+
+```
+singularity pull --arch amd64 library://icaoberg/default/bioformats:v6.10
+```
+
 ## Disclaimer
 
 [![Wold you buy me some coffee?](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/icaoberg)
