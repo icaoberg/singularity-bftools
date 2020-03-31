@@ -1,4 +1,4 @@
-# bioformats
+# bftools
 [![Hosted](https://img.shields.io/badge/hosted-sylabs.io-green.svg)](https://cloud.sylabs.io/library/icaoberg/default/bioformats)
 ![Release](https://img.shields.io/badge/release-v6.3.1-green.svg)
 [![Build Status](https://travis-ci.org/icaoberg/singularity-bioformats.svg?branch=master)](https://travis-ci.org/icaoberg/singularity-bioformats)
@@ -9,7 +9,7 @@
 
 ![Logo](https://www-legacy.openmicroscopy.org/site/support/ome-artwork/bio-formats-logos/bio-formats-logo-800.png)
 
-Singularity recipe for [bio-formats](https://www.openmicroscopy.org/bio-formats/).
+Singularity recipe for [bftools](https://www.openmicroscopy.org/bio-formats/).
 
 * `showinf`. Prints information about a given image file to the console, and displays the image itself in the Bio-Formats image viewer (see Displaying images and metadata for more information).
 
